@@ -1,0 +1,58 @@
+@import "variable";
+@import "header";
+@import "mixin";
+@import "app";
+@import "feature";
+@import "bg_background";
+@import "social";
+@import "footer";
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
+}
+
+a {
+    color: $demo-primary;
+    &:hover,
+    &:focus {
+        color: darken($demo-primary, 10%);
+    }
+}
+
+hr {
+    max-width: 100px;
+    margin: 25px auto 0;
+    border-width: 1px;
+    border-color: fade-out($gray-darker, .9);
+}
+
+hr.light {
+    border-color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+section {
+    padding: 100px 0;
+    h2 {
+        font-size: 50px;
+    }
+}

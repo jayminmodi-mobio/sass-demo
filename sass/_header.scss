@@ -1,0 +1,137 @@
+// Styling for the navbar
+#mainNav {
+    border-color: fade-out($gray-darker, .95);
+    background-color: white;
+    .navbar-brand {
+        color: $demo-primary;
+        &:hover,
+        &:focus {
+            color: darken($demo-primary, 10%);
+        }
+    }
+    .navbar-toggler {
+        font-size: 12px;
+        padding: 8px 10px;
+        color: $gray-darker;
+    }
+    .navbar-nav {
+        li {
+            a {
+                font-size: 11px;
+                &.active {
+                    color: $demo-primary !important;
+                    background-color: transparent;
+                    &:hover {
+                        background-color: transparent;
+                    }
+                }
+            }
+            a,
+            a:focus {
+                color: $gray-darker;
+                &:hover {
+                    color: $demo-primary;
+                }
+            }
+        }
+    }
+    @media (min-width: 992px) {
+        border-color: transparent;
+        background-color: transparent;
+        .navbar-brand {
+            color: fade(white, 70%);
+            &:hover,
+            &:focus {
+                color: white;
+            }
+        }
+        .navbar-nav>li>a,
+        .navbar-nav>li>a:focus {
+            color: fade-out(white, .3);
+            &:hover {
+                color: white;
+            }
+        }
+        &.navbar-shrink {
+            border-color: fade-out($gray-darker, .9);
+            background-color: white;
+            .navbar-brand {
+                color: $gray-darker;
+                &:hover,
+                &:focus {
+                    color: $demo-primary;
+                }
+            }
+            .navbar-nav>li>a,
+            .navbar-nav>li>a:focus {
+                color: $gray-darker;
+                &:hover {
+                    color: $demo-primary;
+                }
+            }
+        }
+    }
+}
+
+// Styling for the bannner
+header.masthead {
+    position: relative;
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    color: white;
+    background: url('../images/bg-pattern.png'), $demo-secondary;
+    background: url('../images/bg-pattern.png'), linear-gradient(to left, $demo-secondary, $demo-tertiary);
+    .header-content {
+        max-width: 500px;
+        margin-bottom: 100px;
+        text-align: center;
+        h1 {
+            font-size: 30px;
+        }
+    }
+    .device-container {
+        max-width: 325px;
+        margin-right: auto;
+        margin-left: auto;
+        .screen img {
+            border-radius: 3px;
+        }
+    }
+    .btn-outline {
+        color: white;
+        border: 1px solid;
+        border-color: white;
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            color: white;
+            border-color: $demo-primary;
+            background-color: $demo-primary;
+        }
+    }
+    .btn {
+        border-radius: 300px;
+    }
+    .btn-xl {
+        font-size: 17px;
+        padding: 12px 50px;
+    }
+    @media (min-width: 992px) {
+        height: 100vh;
+        min-height: 775px;
+        padding-top: 0;
+        padding-bottom: 0;
+        .header-content {
+            margin-bottom: 0;
+            text-align: left;
+            h1 {
+                font-size: 50px;
+            }
+        }
+        .device-container {
+            max-width: 325px;
+        }
+    }
+}
